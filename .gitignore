@@ -9,7 +9,8 @@ lerna-debug.log*
 stats.html
 
 node_modules
-uni_modules/dist
+uni_modules
+!uni_modules/package.json
 dist
 dev-dist
 locale
