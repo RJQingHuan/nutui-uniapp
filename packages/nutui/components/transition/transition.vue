@@ -22,25 +22,14 @@ export default defineComponent({
 </script>
 
 <template>
-  <template v-if="props.destroyOnClose">
-    <view
-      v-if="display"
-      :class="classes"
-      :style="styles"
-      @click="clickHandler"
-    >
-      <slot />
-    </view>
-  </template>
-  <template v-else>
-    <view
-      :class="classes"
-      :style="styles"
-      @click="clickHandler"
-    >
-      <slot />
-    </view>
-  </template>
+  <view
+    v-if="!props.destroyOnClose || display"
+    :class="classes"
+    :style="styles"
+    @click="clickHandler"
+  >
+    <slot />
+  </view>
 </template>
 
 <style lang="scss">

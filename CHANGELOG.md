@@ -1,3 +1,21 @@
+# [1.7.0](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.6.9...v1.7.0) (2024-02-22)
+
+### Bug Fixes
+
+* **input:** 修复readonly无效 ([f1547bd](https://github.com/nutui-uniapp/nutui-uniapp/commit/f1547bdb455771926c5384979ab5132d4d6df5ab))
+* **tabs:** align属性类型错误 ([f9b0eb4](https://github.com/nutui-uniapp/nutui-uniapp/commit/f9b0eb453dc7ce7114c784bb2cc69b5a29eb5d12))
+
+## [1.6.9](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.6.8...v1.6.9) (2024-02-22)
+
+### Bug Fixes
+
+* **navbar:** 修复在APP上顶部安全距离无效的问题 ([#186](https://github.com/nutui-uniapp/nutui-uniapp/issues/186)) ([e475e7e](https://github.com/nutui-uniapp/nutui-uniapp/commit/e475e7e449e2bddb50484efe0ee8ee03f1febc72))
+* **navbar:** 修复占位元素重复计算状态栏高度的问题 ([#187](https://github.com/nutui-uniapp/nutui-uniapp/issues/187)) ([e35083c](https://github.com/nutui-uniapp/nutui-uniapp/commit/e35083cda311201492719b0deb64e3097dc2dec0))
+
+### Features
+
+* **textarea:** 新增placeholder-style、placeholder-class属性 ([ada249f](https://github.com/nutui-uniapp/nutui-uniapp/commit/ada249ff100f60c2217adb31ab59692a6299f924))
+
 ## [1.6.8](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.6.7...v1.6.8) (2024-02-20)
 
 ### Bug Fixes
