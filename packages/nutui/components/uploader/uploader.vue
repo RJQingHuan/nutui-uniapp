@@ -134,7 +134,7 @@ function readFile(files: ChooseFile[]) {
     fileItem.type = fileType!
     fileItem.formData = props.data
     if (props.isPreview)
-      fileItem.url = fileType === 'video' ? file.thumbTempFilePath : filepath
+      fileItem.url = fileType === 'video' ? file.url : filepath
 
     fileList.value.push(fileItem)
     executeUpload(fileItem, index)
@@ -162,9 +162,9 @@ function filterFiles(files: ChooseFile[]) {
   return files
 }
 
-function onDelete(file: FileItem, index: number) {
+async function onDelete(file: FileItem, index: number) {
   clearUploadQueue(index)
-  if (props.beforeDelete(file, fileList)) {
+  if (props.beforeDelete == null || await props.beforeDelete(file, fileList)) {
     fileList.value.splice(index, 1)
     emit('delete', {
       file,
@@ -241,7 +241,7 @@ export default defineComponent({
           </view>
         </view>
 
-        <view v-if="isDeletable" class="close" @click="onDelete(item, index)">
+        <view v-if="isDeletable && !disabled" class="close" @click="onDelete(item, index)">
           <slot name="deleteIcon">
             <NutIcon name="failure" />
           </slot>
@@ -272,7 +272,7 @@ export default defineComponent({
             {{ item.name }}
           </view>
           <NutIcon
-            v-if="isDeletable"
+            v-if="isDeletable && !disabled"
             name="del"
             custom-color="#808080"
             custom-class="nut-uploader__preview-img__file__del"

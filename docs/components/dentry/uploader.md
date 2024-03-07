@@ -243,6 +243,7 @@ setup() {
 | size-type                 | [是否压缩所选文件](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseMedia.html) | Array                             | `['original','compressed']` |
 | media-type`仅支持WEAPP`   | [选择文件类型](https://developers.weixin.qq.com/miniprogram/dev/api/media/video/wx.chooseMedia.html)     | Array                             | `['image', 'video', 'mix']`        |
 | max-duration`仅支持WEAPP` | 拍摄视频最长拍摄时间，单位秒。时间范围为 3s 至 60s 之间。不限制相册。                                    | Number                            | 10                          |
+| accept                    | 允许上传的文件类型                                                                                       |String                            | `['image','media','video','all']`
 | headers                   | 设置上传的请求头部                                                                                       | object                            | `{}`                        |
 | data                      | 附加上传的信息 formData                                                                                  | object                            | `{}`                        |
 | xhr-state                 | 接口响应的成功状态（status）值                                                                           | Number                            | `200`                       |
@@ -258,9 +259,11 @@ setup() {
 | 名称       | 说明                                                  | 默认值                            |
 |------------|-------------------------------------------------------|-----------------------------------|
 | status     | 文件状态值，可选`ready`,`uploading`,`success`,`error` | `ready`                           |
+| message    | 提示语, 上传失败时显示 | - |
 | uid        | 文件的唯一标识                                        | `new Date().getTime().toString()` |
 | name       | 文件名称                                              | -                                 |
 | url        | 文件路径                                              | -                                 |
+| type       | 文件类型,可选`image`,`video`,`audio` | - |
 | formData   | 上传所需的data                                        | `{}`                              |
 | percentage | 上传百分比                                            | `0`                               |
 

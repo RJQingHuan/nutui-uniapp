@@ -1,8 +1,10 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes, PropType, StyleValue } from 'vue'
+import type { TextareaOnBlurEvent, TextareaOnConfirmEvent, TextareaOnFocusEvent, TextareaOnInputEvent } from '@uni-helper/uni-app-types'
+import type { ClassType } from '../_utils'
 import { commonProps, isString, makeNumberProp, makeStringProp, truthProp } from '../_utils'
-import { BLUR_EVENT, CHANGE_EVENT, CONFIRM_EVENT, FOCUS_EVENT, UPDATE_MODEL_EVENT } from '../_constants'
+import { BLUR_EVENT, CHANGE_EVENT, CONFIRM_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../_constants'
 import type { InputAlignType } from '../input'
-import type { AdjustKeyboardTo, ConfirmTextType } from './type'
+import type { TextareaAdjustKeyboardTo, TextareaAutosizeObject, TextareaConfirmType } from './type'
 
 export const textareaProps = {
   ...commonProps,
@@ -27,6 +29,20 @@ export const textareaProps = {
    */
   rows: [String, Number],
   /**
+   * @description 文本域自定义类名
+   */
+  textareaClass: {
+    type: [String, Object, Array] as PropType<ClassType>,
+    default: '',
+  },
+  /**
+   * @description 文本域自定义样式
+   */
+  textareaStyle: {
+    type: [String, Object, Array] as PropType<StyleValue>,
+    default: '',
+  },
+  /**
    * @description 设置占位提示文字
    */
   placeholder: String,
@@ -50,7 +66,7 @@ export const textareaProps = {
    * @description 是否自适应内容高度，也可传入对象
    */
   autosize: {
-    type: [Boolean, Object],
+    type: [Boolean, Object] as PropType<boolean | TextareaAutosizeObject>,
     default: false,
   },
   /**
@@ -92,7 +108,7 @@ export const textareaProps = {
   /**
    * @description 设置键盘右下角按钮的文字，可选值 `send` `search` `next` `go` `done` `return`
    */
-  confirmType: makeStringProp<ConfirmTextType>('done'),
+  confirmType: makeStringProp<TextareaConfirmType>('return'),
   /**
    * @description 点击键盘右下角按钮时是否保持键盘不收起
    */
@@ -100,17 +116,18 @@ export const textareaProps = {
   /**
    * @description 键盘对齐位置，可选值 `cursor` `bottom`
    */
-  adjustKeyboardTo: makeStringProp<AdjustKeyboardTo>('cursor'),
+  adjustKeyboardTo: makeStringProp<TextareaAdjustKeyboardTo>('cursor'),
 }
 
 export type TextareaProps = ExtractPropTypes<typeof textareaProps>
 
 export const textareaEmits = {
-  [BLUR_EVENT]: (evt: Event) => evt instanceof Object,
-  [FOCUS_EVENT]: (evt: Event) => evt instanceof Object,
+  [BLUR_EVENT]: (evt: TextareaOnBlurEvent) => evt instanceof Object,
+  [FOCUS_EVENT]: (evt: TextareaOnFocusEvent) => evt instanceof Object,
   [CHANGE_EVENT]: (val1?: string, val2?: string | Event) => isString(val1) && (isString(val2) || (val2 instanceof Object)),
   [UPDATE_MODEL_EVENT]: (val1?: string, val2?: string | Event) => isString(val1) && (isString(val2) || (val2 instanceof Object)),
-  [CONFIRM_EVENT]: (evt: any) => evt instanceof Object,
+  [CONFIRM_EVENT]: (evt: TextareaOnConfirmEvent) => evt instanceof Object,
+  [INPUT_EVENT]: (val: string, evt: TextareaOnInputEvent) => isString(val) && evt instanceof Object,
 }
 
 export type TextareaEmits = typeof textareaEmits

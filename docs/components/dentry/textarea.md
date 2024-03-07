@@ -53,6 +53,8 @@ export default {
 | 参数        | 说明                                             | 类型           | 默认值         |
 |-------------|--------------------------------------------------|----------------|----------------|
 | v-model     | 输入值，支持双向绑定                             | string         | - |
+| textarea-style `1.7.3` | 文本域自定义样式 | `StyleValue` | - |
+| textarea-class `1.7.3` | 文本域自定义类名 | `ClassType` | - |
 | placeholder | 设置占位提示文字                                 | string         | `请输入内容` |
 | placeholder-style `1.6.9` | 指定 placeholder 的样式 | string | - |
 | placeholder-class `1.6.9` | 指定 placeholder 的样式类 | string | `textarea-placeholder` |
@@ -84,6 +86,7 @@ export default {
 | focus  | 聚焦时触发     | `event`       |
 | blur   | 失焦时触发     | `value,event` |
 | confirm | 点击完成按钮时触发 | `event` |
+| input   | 键盘输入时触发     | `value,event` |
 
 ## 主题定制
 

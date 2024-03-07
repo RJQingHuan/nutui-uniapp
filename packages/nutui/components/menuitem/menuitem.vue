@@ -36,7 +36,9 @@ export default defineComponent({
     }>(MENU_KEY)
 
     const classes = computed(() => {
-      return getMainClass(props, componentName)
+      return getMainClass(props, componentName, {
+        'nut-hidden': !state.showWrapper,
+      })
     })
     const styles = computed(() => {
       const obj = parent?.props.direction === 'down'
@@ -116,11 +118,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <view v-show="state.showWrapper" :class="classes" :style="styles">
+  <view :class="classes" :style="styles">
     <view
-      v-show="state.showPopup"
       class="nut-menu-item-placeholder-element"
-      :class="{ 'placeholder-element-up': parent?.props.direction === 'up' }"
+      :class="{ 'nut-hidden': !state.showPopup, 'placeholder-element-up': parent?.props.direction === 'up' }"
       :style="placeholderElementStyle"
       @click="handleClickOutside"
     />
@@ -138,7 +139,8 @@ export default defineComponent({
       :lock-scroll="parent?.props.lockScroll"
       :close-on-click-overlay="parent?.props.closeOnClickOverlay"
       @closed="handleClose"
-      @update:visible="handleVisible"
+      @open="handleVisible(true)"
+      @close="handleVisible(false)"
     >
       <scroll-view :scroll-y="true">
         <view id="nut-menu-item__content" class="nut-menu-item__content">

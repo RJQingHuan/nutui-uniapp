@@ -1,8 +1,9 @@
-import type { ExtractPropTypes, PropType } from 'vue'
+import type { ExtractPropTypes, PropType, StyleValue } from 'vue'
 import type { InputOnBlurEvent, InputOnConfirmEvent, InputOnFocusEvent, InputOnInputEvent } from '@uni-helper/uni-app-types'
+import type { ClassType } from '../_utils'
 import { commonProps, isNumber, isString, makeNumberProp, makeNumericProp, makeStringProp, truthProp } from '../_utils'
 import { BLUR_EVENT, CLEAR_EVENT, CLICK_EVENT, CONFIRM_EVENT, FOCUS_EVENT, INPUT_EVENT, UPDATE_MODEL_EVENT } from '../_constants'
-import type { ConfirmTextType, InputAlignType, InputFormatTrigger, InputMode, InputType } from './type'
+import type { InputAlignType, InputConfirmType, InputFormatTrigger, InputMode, InputType } from './type'
 
 export const inputProps = {
   ...commonProps,
@@ -14,6 +15,20 @@ export const inputProps = {
    * @description 输入值，双向绑定
    */
   modelValue: makeNumericProp(''),
+  /**
+   * @description 输入框自定义类名
+   */
+  inputClass: {
+    type: [String, Object, Array] as PropType<ClassType>,
+    default: '',
+  },
+  /**
+   * @description 输入框自定义样式
+   */
+  inputStyle: {
+    type: [String, Object, Array] as PropType<StyleValue>,
+    default: '',
+  },
   /**
    * @description 输入框为空时占位符
    */
@@ -84,7 +99,7 @@ export const inputProps = {
   /**
    * @description 键盘右下角按钮的文字，仅在`type='text'`时生效,可选值 `send`：发送、`search`：搜索、`next`：下一个、`go`：前往、`done`：完成
    */
-  confirmType: makeStringProp<ConfirmTextType>('done'),
+  confirmType: makeStringProp<InputConfirmType>('done'),
   /**
    * @description  键盘弹起时，是否自动上推页面
    */
