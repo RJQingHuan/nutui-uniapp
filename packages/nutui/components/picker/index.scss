@@ -1,4 +1,4 @@
-@import '../pickercolumn/index';
+@import "../pickercolumn/index";
 
 .nut-theme-dark {
   .nut-picker {
@@ -6,7 +6,13 @@
     background: $dark-background;
     border-radius: 5px;
 
-    // 标题
+    /* #ifndef H5 */
+    &__mask {
+      background: none !important;
+    }
+
+    /* #endif */
+
     &__bar {
       display: flex;
       align-items: center;
@@ -17,7 +23,6 @@
     &__title {
       color: $dark-color;
     }
-
 
     &-content {
       color: $dark-color;
@@ -34,14 +39,6 @@
   background: #fff;
   border-radius: 5px;
 
-  /* #ifndef H5 */
-  &__mask {
-    background: none !important;
-  }
-
-  /* #endif */
-
-  // 标题
   &__bar {
     display: flex;
     align-items: center;
@@ -82,7 +79,7 @@
       top: 50%;
       width: 100%;
       height: var(--line-height);
-      content: '';
+      content: "";
       border: $picker-item-active-line-border;
       border-right: 0;
       border-left: 0;

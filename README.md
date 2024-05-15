@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://s2.loli.net/2023/08/30/1AxH9rbqi4kvCls.png"
 width="100"
-height="100" style="max-width: 100%;" />
+height="100" style="max-width: 100%;" alt="logo" />
 </p>
 <h1 align="center">nutui-uniapp</h1>
 <p align="center">京东风格的轻量级 uni-app 组件库，支持移动端 H5 和 小程序开发</p>
@@ -16,17 +16,17 @@ height="100" style="max-width: 100%;" />
   <img alt="npm" src="https://img.shields.io/npm/dw/nutui-uniapp?logo=npm&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fnutui-uniapp">
 </a>
 <a href="https://www.npmjs.com/package/nutui-uniapp">
-  <img src="https://img.shields.io/npm/dt/nutui-uniapp?style=flat-square">
+  <img src="https://img.shields.io/npm/dt/nutui-uniapp?style=flat-square" alt="downloads">
 </a>
 <a href="https://app.netlify.com/sites/nutui-uniapp/deploys">
-<img src="https://api.netlify.com/api/v1/badges/dbbf78de-0649-4b88-a06a-f3b18d053776/deploy-status" />
+<img src="https://api.netlify.com/api/v1/badges/dbbf78de-0649-4b88-a06a-f3b18d053776/deploy-status" alt="netlify" />
 </a>
 </p>
 
 <p align="center">
    <img src="https://s2.loli.net/2023/07/05/eJwPvqCY8EcZ7Vi.png" width="164" alt="NutUI" />
   &nbsp;
-  <img src="https://s2.loli.net/2023/07/05/QyW2RHcmnuvIFwp.jpg" width="166" title="请用微信扫码">
+  <img src="https://s2.loli.net/2023/07/05/QyW2RHcmnuvIFwp.jpg" width="166" title="请用微信扫码" alt="NutUI">
   &nbsp;
 </p>
 
@@ -45,15 +45,15 @@ nutui-uniapp 组件库，基于Taro版[`NutUi`](https://nutui.jd.com/#/) 4.x版�
 - 🍭 支持暗黑模式
 - 🌍 支持国际化
 
-## 快速开始
+## 快速上手
 
-请参考[快速开始](https://nutui-uniapp.netlify.app/guide/quick-start.html)。
+请参考[快速上手](https://uniapp-nutui.tech/guide/quick-start.html)。
 
 ## 链接
 
 - [意见反馈](https://github.com/nutui-uniapp/nutui-uniapp/issues)
 - [更新日志](https://github.com/nutui-uniapp/nutui-uniapp/releases)
-- [常见问题](https://nutui-uniapp.netlify.app/guide/faq.html)
+- [常见问题](https://uniapp-nutui.tech/guide/faq.html)
 - [Discussions 讨论区](https://github.com/nutui-uniapp/nutui-uniapp/discussions)
 
 ## 贡献指南
@@ -67,7 +67,7 @@ nutui-uniapp 组件库，基于Taro版[`NutUi`](https://nutui.jd.com/#/) 4.x版�
 感谢以下所有给 nutui-uniapp 贡献过代码的 [开发者](https://github.com/nutui-uniapp/nutui-uniapp/graphs/contributors)。
 
 <a href="https://github.com/nutui-uniapp/nutui-uniapp/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=nutui-uniapp/nutui-uniapp" />
+  <img src="https://contrib.rocks/image?repo=nutui-uniapp/nutui-uniapp" alt="contributors" />
 </a>
 
 ## 感谢

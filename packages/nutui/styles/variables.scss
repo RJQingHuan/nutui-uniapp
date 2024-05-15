@@ -198,10 +198,14 @@ $picker-item-text-font-size: var(--nut-picker-item-text-font-size, 14px) !defaul
 $picker-item-active-line-border: var(--nut-picker-item-active-line-border, 1px solid #eae7e7) !default;
 
 // input
+$input-padding: var(--nut-input-padding, 10px 25px) !default;
+$input-font-size: var(--nut-input-font-size, $font-size-2) !default;
+$input-line-height: var(--nut-input-line-height, 20px) !default;
 $input-border-bottom: var(--nut-input-border-bottom, #eaf0fb) !default;
 $input-disabled-color: var(--nut-input-disabled-color, #c8c9cc) !default;
 $input-required-color: var(--nut-input-required-color, $required-color) !default;
-$input-font-size: var(--nut-input-font-size, $font-size-2) !default;
+$input-limit-font-size: var(--nut-input-limit-font-size, $font-size-1) !default;
+$input-limit-color: var(--nut-input-limit-color, #808080) !default;
 
 // textarea
 
@@ -318,8 +322,6 @@ $switch-inside-open-transform: var(--nut-switch-inside-open-transform, translate
 $switch-inside-close-transform: var(--nut-switch-inside-close-transform, translateX(30%)) !default;
 
 // toast
-$toast-title-font-size: var(--nut-toast-title-font-size, 16px) !default;
-$toast-text-font-size: var(--nut-toast-text-font-size, 14px) !default;
 $toast-font-color: var(--nut-toast-font-color, $white) !default;
 $toast-inner-padding: var(--nut-toast-inner-padding, 24px 30px) !default;
 $toast-inner-bg-color: var(--nut-toast-inner-bg-color, rgb(0 0 0 / 80%)) !default;
@@ -559,22 +561,22 @@ $timeselect-timedetail-item-cur-text-color: var(
 ) !default;
 
 //  tag
+$tag-height: var(--nut-tag-height, auto) !default;
+$tag-padding: var(--nut-tag-padding, 0 4px) !default;
 $tag-font-size: var(--nut-tag-font-size, 12px) !default;
+$tag-default-color: var(--nut-tag-default-color, #fff) !default;
+$tag-border-width: var(--nut-tag-border-width, 1px) !default;
 $tag-default-border-radius: var(--nut-tag-default-border-radius, 4px) !default;
 $tag-round-border-radius: var(--nut-tag-round-border-radius, 8px) !default;
+$tag-mark-border-radius: var(--nut-tag-mark-border-radius, 0 12px 12px 0) !default;
 $tag-default-background-color: var(--nut-tag-default-background-color, #000) !default;
 $tag-primary-background-color: var(--nut-tag-primary-background-color, #3460fa) !default;
 $tag-success-background-color: var(--nut-tag-success-background-color, #4fc08d) !default;
-$tag-danger-background-color: var(
-  --nut-tag-danger-background-color,
-  linear-gradient(135deg, rgb(242 20 12 / 100%) 0%, rgb(232 34 14 / 100%) 70%, rgb(242 77 12 / 100%) 100%)
-) !default;
-$tag-danger-background-color-plain: var(--nut-tag-danger-background-color-plain, #df3526) !default;
+$tag-danger-background-color: var(--nut-tag-danger-background-color, #df3526) !default;
 $tag-warning-background-color: var(--nut-tag-warning-background-color, #f3812e) !default;
-$tag-default-color: var(--nut-tag-default-color, #fff) !default;
-$tag-border-width: var(--nut-tag-border-width, 1px) !default;
-$tag-plain-background-color: var(--nut-tag-plain-background-color, #fff) !default;
-$tag-height: var(--nut-tag-height, auto) !default;
+$tag-plain-background-color: var(--nut-tag-plain-background-color, transparent) !default;
+$tag-disabled-background-color: var(--nut-tag-disabled-background-color, $disable-color) !default;
+$tag-disabled-close-color: var(--nut-tag-disabled-close-color, #aaa) !default;
 
 //  badge
 $badge-background-color: var(
@@ -731,7 +733,6 @@ $searchbar-width: var(--nut-searchbar-width, 100%) !default;
 $searchbar-input-background: var(--nut-searchbar-input-background, #f7f7f7) !default;
 $searchbar-input-padding: var(--nut-searchbar-input-padding, 0 0 0 13px) !default;
 $searchbar-input-height: var(--nut-searchbar-input-height, 32px) !default;
-$searchbar-input-width: var(--nut-searchbar-input-width, 100%) !default;
 $searchbar-input-border-radius: var(--nut-searchbar-input-border-radius, 16px) !default;
 $searchbar-input-box-shadow: var(--nut-searchbar-input-box-shadow, 0 0 8px 0 rgb(0 0 0 / 4%)) !default;
 $searchbar-input-bar-color: var(--nut-searchbar-input-bar-color, inherit) !default;

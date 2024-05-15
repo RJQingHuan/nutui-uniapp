@@ -11,10 +11,16 @@ import { getMainClass } from '../_utils'
 import { skuEmits, skuProps } from './sku'
 
 const props = defineProps(skuProps)
+
 const emit = defineEmits(skuEmits)
+
+defineExpose({
+  resetCount,
+})
+
 const slots = useSlots()
 const showPopup = ref(props.visible)
-
+const skuStepperRef = ref()
 const goodsCount = ref(props.stepperMin)
 const classes = computed(() => {
   return getMainClass(props, componentName)
@@ -85,7 +91,14 @@ function closePopup(type: string) {
 function close() {
   emit(UPDATE_VISIBLE_EVENT, false)
 }
+
+function resetCount() {
+  skuStepperRef.value.reset()
+}
+
 const getSlots = (name: string) => slots[name]
+
+const hasSkuOperateSlot = getSlots('skuOperate') != null
 </script>
 
 <script lang="ts">
@@ -122,25 +135,28 @@ export default defineComponent({
       </slot>
 
       <scroll-view scroll-y class="nut-sku-content">
-        <slot name="skuSelectTop" />
+        <view class="nut-sku-content-wrapper">
+          <slot name="skuSelectTop" />
 
-        <slot name="skuSelect" />
-        <SkuSelect v-if="!getSlots('sku-select')" :sku="sku" @select-sku="selectSku" />
+          <slot name="skuSelect" />
+          <SkuSelect v-if="!getSlots('sku-select')" :sku="sku" @select-sku="selectSku" />
 
-        <slot name="skuStepper">
-          <SkuStepper
-            :goods="goods" :stepper-title="stepperTitle || translate('buyNumber')"
-            :stepper-max="stepperMax" :stepper-min="stepperMin" :stepper-extra-text="stepperExtraText" @add="add"
-            @reduce="reduce" @change-stepper="changeStepper" @over-limit="stepperOverLimit"
-          />
-        </slot>
+          <slot name="skuStepper">
+            <SkuStepper
+              ref="skuStepperRef" :goods="goods" :stepper-title="stepperTitle || translate('buyNumber')"
+              :stepper-max="stepperMax" :stepper-min="stepperMin" :stepper-extra-text="stepperExtraText" @add="add"
+              @reduce="reduce" @change-stepper="changeStepper" @over-limit="stepperOverLimit"
+            />
+          </slot>
 
-        <slot name="skuStepperBottom" />
+          <slot name="skuStepperBottom" />
+        </view>
       </scroll-view>
 
       <SkuOperate
         :btn-extra-text="btnExtraText" :btn-options="btnOptions" :buy-text="buyText || translate('buyNow')"
         :add-cart-text="addCartText || translate('addToCart')" :confirm-text="confirmText || translate('confirm')"
+        :show-default-operate="!hasSkuOperateSlot"
         @click-btn-operate="clickBtnOperate"
       >
         <template #operateBtn>

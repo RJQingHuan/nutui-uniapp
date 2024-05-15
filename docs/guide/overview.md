@@ -4,7 +4,7 @@
 
 nutui-uniapp 组件库，基于Taro版[`NutUi`](https://nutui.jd.com) 4.x版本修改而来，适配了uni-app, 使用 Vue 技术栈开发小程序应用，开箱即用，拥有丰富的业务组件。
 
-使用请参考[快速开始](./quick-start.md)。
+使用请参考[快速上手](./quick-start.md)。
 
 ## 特性
 
@@ -22,7 +22,7 @@ nutui-uniapp 组件库，基于Taro版[`NutUi`](https://nutui.jd.com) 4.x版本�
 <p align="center" class="flex justify-center gap-10px">
    <img src="https://s2.loli.net/2023/07/05/eJwPvqCY8EcZ7Vi.png" width="164" alt="NutUI" />
   &nbsp;
-  <img src="https://s2.loli.net/2023/07/05/QyW2RHcmnuvIFwp.jpg" width="166" title="请用微信扫码">
+  <img src="https://s2.loli.net/2023/07/05/QyW2RHcmnuvIFwp.jpg" width="166" title="请用微信扫码" alt="NutUI">
   &nbsp;
 </p>
 
@@ -32,4 +32,4 @@ nutui-uniapp 组件库，基于Taro版[`NutUi`](https://nutui.jd.com) 4.x版本�
 
 感谢所有已经为 nutui-uniapp 做出贡献的人！
 
-<a href="https://github.com/nutui-uniapp/nutui-uniapp/graphs/contributors"><img src="https://contributors.nn.ci/api?repo=nutui-uniapp/nutui-uniapp" /></a>
+<a href="https://github.com/nutui-uniapp/nutui-uniapp/graphs/contributors"><img src="https://contributors.nn.ci/api?repo=nutui-uniapp/nutui-uniapp" alt="NutUI" /></a>

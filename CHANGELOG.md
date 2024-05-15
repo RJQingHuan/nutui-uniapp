@@ -1,3 +1,100 @@
+## [1.7.10](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.9...v1.7.10) (2024-05-08)
+
+### Bug Fixes
+
+* **input-number:** 修复小程序不支持vBind ([60427bc](https://github.com/nutui-uniapp/nutui-uniapp/commit/60427bc61a23383a42985fa276c40ada4a5c6b6d))
+
+## [1.7.9](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.8...v1.7.9) (2024-05-08)
+
+### Features
+
+* **input-number:** 支持透传属性至 input 元素 ([7547ed0](https://github.com/nutui-uniapp/nutui-uniapp/commit/7547ed0d7f458babb76c19ddd3c5bd093e021474))
+* **number-keyboard:** 新增 confirm 事件 ([0a6b06c](https://github.com/nutui-uniapp/nutui-uniapp/commit/0a6b06cfd21fe3e7957e082115947e393a7072f7))
+
+## [1.7.8](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.7...v1.7.8) (2024-04-23)
+
+### Bug Fixes
+
+* 修复useSelectorQuery在app-plus环境获取instance报错 ([#307](https://github.com/nutui-uniapp/nutui-uniapp/issues/307)) ([3499c41](https://github.com/nutui-uniapp/nutui-uniapp/commit/3499c41bd6a3d2420ba32d5272a41b12c8da86d7))
+* 修改tabs选项卡微笑曲线属性，在navbar组件content slot中样式出错bug ([0f04867](https://github.com/nutui-uniapp/nutui-uniapp/commit/0f048670229498aa5a3dc8ec63c0fe744d8cfad2))
+* **address:** 修复在选择地址后，下一级地址无法滚动到顶部 ([#301](https://github.com/nutui-uniapp/nutui-uniapp/issues/301)) ([6971ece](https://github.com/nutui-uniapp/nutui-uniapp/commit/6971ece48b5e039f82d184e672556bad5aafb6af))
+* **cell:** 修复to属性无效 ([#294](https://github.com/nutui-uniapp/nutui-uniapp/issues/294)) ([f691dff](https://github.com/nutui-uniapp/nutui-uniapp/commit/f691dffeed47aed81a83d42aad625526b4efe85a))
+* **sku:** 移除defineExpose导入 ([e10294b](https://github.com/nutui-uniapp/nutui-uniapp/commit/e10294bfd4f6217df21a2bbc5c620c1587a178e9))
+* **tabs:** 修复 vertical 方式 tab 数量过多时滚动定位不准确的问题 ([a1334df](https://github.com/nutui-uniapp/nutui-uniapp/commit/a1334df9eebec32ebe0638242922d70ad5a9fe23))
+* **uploader:** 修复uid生成可能重复 ([1f49808](https://github.com/nutui-uniapp/nutui-uniapp/commit/1f49808b03fbaa0aab5865a2cbe65cbf933ce00c)), closes [#306](https://github.com/nutui-uniapp/nutui-uniapp/issues/306)
+
+### Features
+
+* **sku:** 新增重置商品数量方法 ([#305](https://github.com/nutui-uniapp/nutui-uniapp/issues/305)) ([8e8260b](https://github.com/nutui-uniapp/nutui-uniapp/commit/8e8260bfddf884169a8c4f3f271a7dd58bc0c66a))
+* **switch:** add disabled prop & mark disable deprecated ([#299](https://github.com/nutui-uniapp/nutui-uniapp/issues/299)) ([9e8ac05](https://github.com/nutui-uniapp/nutui-uniapp/commit/9e8ac05e4edd41116fa5f7f80d2cf98f0d3a81cd))
+
+## [1.7.7](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.6...v1.7.7) (2024-04-12)
+
+### Bug Fixes
+
+* **ecard:** 修复输入框表现异常 ([#291](https://github.com/nutui-uniapp/nutui-uniapp/issues/291)) ([5763f25](https://github.com/nutui-uniapp/nutui-uniapp/commit/5763f25855bdd33e0068a9a1c7b2556f1e9dfaaa))
+* **swipe:** 修复组件宽度超出范围以及点击关闭问题 ([#284](https://github.com/nutui-uniapp/nutui-uniapp/issues/284)) ([48cc120](https://github.com/nutui-uniapp/nutui-uniapp/commit/48cc12026e0ec9befb7bc7215621649dee75032c))
+
+### Features
+
+* **datepicker:** 事件新增date参数 ([#289](https://github.com/nutui-uniapp/nutui-uniapp/issues/289)) ([29947b5](https://github.com/nutui-uniapp/nutui-uniapp/commit/29947b5660586650e6d8d281fa353ec47a6e6680))
+* **tag:** 新增disbaled、close-icon-size属性 ([#293](https://github.com/nutui-uniapp/nutui-uniapp/issues/293)) ([85b329c](https://github.com/nutui-uniapp/nutui-uniapp/commit/85b329cdb897164be082f4abe35c56289db1710c))
+
+## [1.7.6](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.5...v1.7.6) (2024-04-10)
+
+### Bug Fixes
+
+* **input:** 修复H5环境下type为number无效 ([#279](https://github.com/nutui-uniapp/nutui-uniapp/issues/279)) ([ec41815](https://github.com/nutui-uniapp/nutui-uniapp/commit/ec41815ae502f56341575706364e3a0eafeb9253))
+* **picker:** 修复非H5平台mask缺失 ([96666cf](https://github.com/nutui-uniapp/nutui-uniapp/commit/96666cf7c93c8e38c5b22c3118e2c1a7fe7a2247))
+* **searchbar:** 修复app端输入框对齐问题 ([#282](https://github.com/nutui-uniapp/nutui-uniapp/issues/282)) ([1f77dab](https://github.com/nutui-uniapp/nutui-uniapp/commit/1f77dab96d3fa0d589e383565c9a1254a309a31a))
+
+### Features
+
+* **addresslist:** 新增是否使用插槽相关属性 ([#274](https://github.com/nutui-uniapp/nutui-uniapp/issues/274)) ([1727859](https://github.com/nutui-uniapp/nutui-uniapp/commit/1727859c45d65322271e3f7121b825f10845ccac))
+* **calendar:** 添加calendar组件点击遮罩关闭事件和点击关闭图标事件 ([#273](https://github.com/nutui-uniapp/nutui-uniapp/issues/273)) ([e70e654](https://github.com/nutui-uniapp/nutui-uniapp/commit/e70e654b57a8884cc4589877f56670652160c33d))
+
+## [1.7.5](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.4...v1.7.5) (2024-03-29)
+
+### Bug Fixes
+
+* **popover:** 修复Popover 气泡弹出框功能问题 ([#269](https://github.com/nutui-uniapp/nutui-uniapp/issues/269)) ([bbf03e5](https://github.com/nutui-uniapp/nutui-uniapp/commit/bbf03e5a973b95d66f76edeb59114872afc606a6))
+* **list:** List 虚拟列表 listData 类型错误 ([8cba423](https://github.com/nutui-uniapp/nutui-uniapp/commit/8cba4236b178c2def23ccfd07ee1528f7530c007))
+* **checkbox:** 修复checkbox重复添加至checkboxgroup.children的问题 ([#266](https://github.com/nutui-uniapp/nutui-uniapp/issues/266)) ([3f2c2b3](https://github.com/nutui-uniapp/nutui-uniapp/commit/3f2c2b3afa0348032eadff9ef5aa8415843ecac8))
+* **dialog:** 修复dialog title响应式失效的问题 ([#267](https://github.com/nutui-uniapp/nutui-uniapp/issues/267)) ([1a0c7cf](https://github.com/nutui-uniapp/nutui-uniapp/commit/1a0c7cf72c448e6e5ff6d7890dd7739e5bbd13b0))
+
+### Features
+
+* **toast:** 新增useToast控制方式 ([#260](https://github.com/nutui-uniapp/nutui-uniapp/issues/260)) ([c014e7a](https://github.com/nutui-uniapp/nutui-uniapp/commit/c014e7a8ed31b9ad4d6bdbf11942528abea1bb26))
+
+### Refactors
+
+* **drag**: 重构 drag组件，修复drag组件多次拖动时位置瞬移到起始点的问题 ([5989869](<https://github.com/nutui-uniapp/nutui-uniapp/commit/5989869>))
+
+## [1.7.4](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.3...v1.7.4) (2024-03-20)
+
+### Bug Fixes
+
+* **picker:** 修复model-value值污染问题 ([ce2e865](https://github.com/nutui-uniapp/nutui-uniapp/commit/ce2e86546b4c2a03f2f5235899071b00dff98d7f))
+
+### Features
+
+* 新增clone、equal工具方法 ([ef1611c](https://github.com/nutui-uniapp/nutui-uniapp/commit/ef1611c44e7382f5a58fbc154de513c15f1a1e59))
+
+## [1.7.3](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.2...v1.7.3) (2024-03-09)
+
+### Bug Fixes
+
+* **elevator:** 修复app端点击索引无效，并且滚动页面索引无法跟随切换问题 ([#237](https://github.com/nutui-uniapp/nutui-uniapp/issues/237)) ([e149974](https://github.com/nutui-uniapp/nutui-uniapp/commit/e1499747ae9997bda7a5679259c211935e4d1713))
+* **picker:** 修复微信小程序暗黑模式picker背景颜色显示错误的问题 ([#236](https://github.com/nutui-uniapp/nutui-uniapp/issues/236)) ([fa425f7](https://github.com/nutui-uniapp/nutui-uniapp/commit/fa425f72584ff515b4b0a2f5810ca21f4f5760f6))
+* **picker:** 修复ts类型错误 ([#241](https://github.com/nutui-uniapp/nutui-uniapp/issues/241)) ([1e83035](https://github.com/nutui-uniapp/nutui-uniapp/commit/1e83035dab748c311ae2d207950bf219da2bcb11))
+* **sku:** 修复默认底部按钮不显示的问题 ([#238](https://github.com/nutui-uniapp/nutui-uniapp/issues/238)) ([6e2c296](https://github.com/nutui-uniapp/nutui-uniapp/commit/6e2c296ad8c2e77a84f504aa5ffe756002f98061))
+* **sku:** 修复组件内容超出,出现横向滚动条的问题 ([#240](https://github.com/nutui-uniapp/nutui-uniapp/issues/240)) ([c0bf4ab](https://github.com/nutui-uniapp/nutui-uniapp/commit/c0bf4ab341a4adbb142da6d282146825af14601d))
+* **uploader:** 修复禁用时能删除文件的问题 ([#234](https://github.com/nutui-uniapp/nutui-uniapp/issues/234)) ([834f9bc](https://github.com/nutui-uniapp/nutui-uniapp/commit/834f9bc7b00eaa0e9ebde33d9c56e1c9ed990d54))
+
+### Features
+
+* **input,textarea:** 新增输入框单独控制样式属性 ([#233](https://github.com/nutui-uniapp/nutui-uniapp/issues/233)) ([e9749b0](https://github.com/nutui-uniapp/nutui-uniapp/commit/e9749b0faa64d026c4c53e1faf349e1c42154a28))
+
 ## [1.7.2](https://github.com/nutui-uniapp/nutui-uniapp/compare/v1.7.1...v1.7.2) (2024-03-04)
 
 ### Bug Fixes
